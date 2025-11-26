@@ -16,6 +16,11 @@ function AddTask() {
   });
 
   function handleToggle() {
+    setFormErrors({
+      title: { message: "" },
+      description: { message: "" },
+    });
+
     setIsOpen((prev) => !prev);
   }
 
@@ -110,7 +115,7 @@ function AddTask() {
                 Description
               </label>
 
-              <ValidationError error={formErrors?.title?.message} />
+              <ValidationError error={formErrors?.description?.message} />
             </div>
             <textarea
               id="description-input"

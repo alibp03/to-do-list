@@ -26,6 +26,11 @@ function TaskOperation({ task }: { task: Task }) {
   }
 
   function handleToggle() {
+    setFormErrors({
+      title: { message: "" },
+      description: { message: "" },
+    });
+
     setIsOpen((prev) => !prev);
   }
 
