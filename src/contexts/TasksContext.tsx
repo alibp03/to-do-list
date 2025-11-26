@@ -17,26 +17,7 @@ type TasksContextType = {
 
 const TasksContext = createContext<TasksContextType | null>(null);
 
-const initialState: TasksType = [
-  {
-    title: "Complete project proposal",
-    description: "Finish the Q4 project proposal and send it to the team",
-    createdAt: new Date().getTime(),
-    id: "1",
-  },
-  {
-    title: "do homework",
-    description: "kose nne naghandri",
-    createdAt: new Date().getTime() + 10,
-    id: "2",
-  },
-  {
-    title: "mirkhan kiri",
-    description: "baiad madresho begam",
-    createdAt: new Date().getTime() + 20,
-    id: "3",
-  },
-];
+const initialState: TasksType = [];
 
 function reducer(state: TasksType, action: { type: string; payload: Task }) {
   switch (action.type) {
